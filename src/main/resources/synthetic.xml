@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+
+    THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
+    FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+
+-->
+<synthetic xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd" xmlns="http://www.xebialabs.com/deployit/synthetic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <type type="executors.RunScript" extends="xlrelease.PythonScript">
+        <property name="iconLocation" default="executors/executors-icon.png" hidden="true" />
+        <property name="taskColor" hidden="true" default="#68B768" />
+
+        <property name="scriptLocation" default="executors/runScript.py" hidden="true" />
+
+        <property name="executorLabel" category="input" label="Server Label" kind="string"/>
+        <property name="scriptToExecute" category="input" label="Script" kind="string" />
+    </type>
+
+	<type type="executors.Server" extends="xlrelease.Configuration">
+        <property name="serverName" label="Name" kind="string" description="Unique name describing this executors Server" />
+        <property name="address" label="Address" kind="string" />
+        <property name="username" label="Username" kind="string" />
+        <property name="password" label="Password" kind="string" password="true" />
+        <property name="label" label="Label" kind="string" />
+        <property name="nrExecutors" label="Executors" kind="integer" default="1"/>
+    </type>
+</synthetic>
