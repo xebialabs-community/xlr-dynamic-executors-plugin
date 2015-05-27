@@ -25,9 +25,9 @@ permission java.io.FilePermission "conf/logback.xml", "read";
 ## Types ##
 
 + `executors.Server`: Create as many servers as you want (Only linux/ssh supported)
-  `serverName` must be unique.
-  `label` will be used to autoselect the server to run the script on. Only 1 label supported. 
-  `nrExecutors` defines the number of scripts that can run in parallel.
+    + `serverName` must be unique.
+    + `label` will be used to autoselect the server to run the script on. Only 1 label supported. 
+    + `nrExecutors` defines the number of scripts that can run in parallel.
 + `executors.RunScript`: Defines the task to be run.
-  `executorLabel`: must match a `executors.Server` label. Only 1 label supported.
-  `scriptToExecute`: The script to be executed (will not be uploaded, so should be present).
+    + `executorLabel`: must match a `executors.Server` label. Only 1 label supported.
+    + `scriptToExecute`: The script to be executed (will not be uploaded, so should be present).
